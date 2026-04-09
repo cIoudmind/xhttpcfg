@@ -4,10 +4,12 @@
 шаг 5-7 панель
 
 шаг 1
+
 <img width="557" height="187" alt="image" src="https://github.com/user-attachments/assets/fcae7849-d875-41fe-b014-e6c2d5786508" />
 
 Где стрелка, нужна запятая потом энтер и вставь фрагмент
-'''bash{
+'''bash
+{
       "tag": "Sweden_XHTTP", ## Вместо "Sweden" ставим страну сервера или убираем
       "listen": "/dev/shm/xrxh.socket,0666",
       "protocol": "vless",
@@ -41,15 +43,18 @@
     }
 
 шаг 2
-'''bash cd /opt/remnanode && docker restart remnanode
+'''bash 
+cd /opt/remnanode && docker restart remnanode
 
 шаг 3
-'''bash nano /opt/remnanode/nginx.conf
+'''bash 
+nano /opt/remnanode/nginx.conf
 
 <img width="630" height="284" alt="image" src="https://github.com/user-attachments/assets/317dd505-c90a-4fe6-9910-aea3ba0c8316" />
 
 и вставляешь этот код, где помечено красным там энтер 
-'''nginx location /xhttppath/ {
+'''nginx 
+location /xhttppath/ {
             client_max_body_size 0;
             grpc_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             client_body_timeout 5m;
@@ -60,7 +65,8 @@
 control+o, enter, control+x
 
 шаг 4
-'''bash docker exec remnawave-nginx nginx -t && docker restart remnawave-nginx
+'''
+bash docker exec remnawave-nginx nginx -t && docker restart remnawave-nginx
 должно показать 
 
 
@@ -78,7 +84,8 @@ security layer = tls
 ALPN = h2,http/1.1
 отпечаток = рандом
 настройки xray -> xHTTP
-'''bash{
+'''bash
+{
   "xmux": {
     "cMaxReuseTimes": 0,
     "maxConcurrency": "16-32",
@@ -93,7 +100,8 @@ ALPN = h2,http/1.1
 }'''
 
 и сохраняем
-'''bash docker restart remnanode
+'''bash 
+docker restart remnanode
 
 шаг 6(раздел ноды)
 ждем пока стартанет нода и в инбаунде ставим основной конфиг+xhttp
