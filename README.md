@@ -5,9 +5,10 @@
 
 шаг 1
 <img width="557" height="187" alt="image" src="https://github.com/user-attachments/assets/fcae7849-d875-41fe-b014-e6c2d5786508" />
+
 Где стрелка, нужна запятая потом энтер и вставь фрагмент
 '''{
-      "tag": "Sweden_XHTTP",
+      "tag": "Sweden_XHTTP", ## Вместо "Sweden" ставим страну сервера или убираем
       "listen": "/dev/shm/xrxh.socket,0666",
       "protocol": "vless",
       "settings": {
@@ -45,6 +46,7 @@
 шаг 3
 '''nano /opt/remnanode/nginx.conf
 <img width="630" height="284" alt="image" src="https://github.com/user-attachments/assets/317dd505-c90a-4fe6-9910-aea3ba0c8316" />
+
 и вставляешь этот код, где помечено красным там энтер 
 '''location /xhttppath/ {
             client_max_body_size 0;
