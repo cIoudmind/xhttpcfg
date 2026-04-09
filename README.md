@@ -38,13 +38,13 @@
           }
         }
       }
-    }
+    }'''
 
 шаг 2
-'''cd /opt/remnanode && docker restart remnanode
+'''cd /opt/remnanode && docker restart remnanode'''
 
 шаг 3
-'''nano /opt/remnanode/nginx.conf
+'''nano /opt/remnanode/nginx.conf'''
 
 <img width="630" height="284" alt="image" src="https://github.com/user-attachments/assets/317dd505-c90a-4fe6-9910-aea3ba0c8316" />
 
@@ -56,11 +56,11 @@
             grpc_read_timeout 315;
             grpc_send_timeout 5m;
             grpc_pass unix:/dev/shm/xrxh.socket;
-        }
+        }'''
 control+o, enter, control+x
 
 шаг 4
-'''docker exec remnawave-nginx nginx -t && docker restart remnawave-nginx
+'''docker exec remnawave-nginx nginx -t && docker restart remnawave-nginx'''
 должно показать 
 
 
@@ -90,16 +90,21 @@ ALPN = h2,http/1.1
   "scMaxEachPostBytes": 1000000,
   "scMinPostsIntervalMs": 30,
   "scStreamUpServerSecs": "20-80"
-}
+}'''
+
 и сохраняем
-'''docker restart remnanode
+'''docker restart remnanode'''
 
 шаг 6(раздел ноды)
 ждем пока стартанет нода и в инбаунде ставим основной конфиг+xhttp
+
+
 <img width="426" height="190" alt="image" src="https://github.com/user-attachments/assets/f6adcfc8-7b30-4720-b1eb-4d7c8ef399c8" />
 
 шаг 7(сквады)
 <img width="490" height="670" alt="image" src="https://github.com/user-attachments/assets/4cde7174-09a0-4a96-bb34-d37888e1c979" />
+
+
 дефолт -> изменить -> нода и ставим только xhttp
 
 
