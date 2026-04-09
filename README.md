@@ -152,3 +152,4 @@ docker restart remnanode
 ## 📎 Источник
 
 https://github.com/legiz-ru/my-remnawave
+https://www.youtube.com/watch?v=WiNCQ8PDkVI
