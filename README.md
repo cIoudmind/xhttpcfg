@@ -17,7 +17,7 @@
 ![step1](https://github.com/user-attachments/assets/fcae7849-d875-41fe-b014-e6c2d5786508)
 
 👉 Где указана стрелка: - поставить запятую `,` - нажать Enter -
-вставить следующий фрагмент в `inbounds`
+вставить следующий фрагмент в `inbounds` и сохраняем
 
 ``` json
 {
